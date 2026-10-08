@@ -3,7 +3,11 @@
 import SectionHeader from "./SectionHeader";
 import { DocumentIcon } from "./icons";
 import { CHART_COLORS } from "../constants/constants";
-
+const Figure = ({ src, alt }: { src: string; alt: string }) => (
+  <div className="w-[85%] h-[70vh] mx-auto mb-6 rounded-xl border border-gray-300 shadow-sm overflow-hidden bg-white">
+    <img src={src} alt={alt} className="w-full h-full object-contain object-top" />
+  </div>
+);
 const KeyHighlights = () => {
   /* ==========================================================
       SERP DATA
@@ -29,7 +33,7 @@ const imageClass =
       keyword: "cyber attack ",
       link: "https://www.fortinet.com/resources/cyberglossary/what-is-secops",
       position: 1,
-      image: "/cyber attack.png",
+      image: "/cyber attack.jpeg",
       insight:"The 'Cyber Attack' keyword has reached the #1 position, demonstrating continued ranking gains driven by consistent backlink acquisition."
     },
    
@@ -109,7 +113,7 @@ const imageClass =
     {
       image: "/5 Cloud Security.jpeg",
       title: " 5 Cloud Security Providers With Built-In Threat Detection Capabilities | techslassh.com.co ",
-      link: "https://techslassh.com.co/5-cloud-security-providers-with-built-in-threat-detection-capabilities/",
+      link: "https://helpinus.net/5-sd-wan-solutions-that-support-zero-touch-network-provisioning/",
     },
   ];
 
@@ -148,7 +152,7 @@ What is SASE, What is Network Security, and Cyber Attack - moved into Page 1 pos
                 <img
                   src={item.image}
                   alt={item.keyword}
-                  className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-6"
+                  className={imageClass}
                 />
 
                 <div className="space-y-3 text-gray-700">

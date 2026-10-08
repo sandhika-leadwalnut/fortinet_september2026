@@ -38,21 +38,24 @@ const OverallRankingsBarChart = ({ data }: OverallRankingsBarChartProps) => {
             }}
             interval={0}
           />
-          <YAxis
+                   <YAxis
             tick={{
               fill: CHART_COLORS.textGray,
               fontSize: BUSINESS_IMPACT_CHART.fontSize.yAxis,
             }}
-            width={BUSINESS_IMPACT_CHART.yAxisWidth}
+            width={70}
             label={{
               value: "Number of Keywords",
               angle: -90,
               position: "insideLeft",
+              offset: 0,
               style: {
                 fill: CHART_COLORS.textGray,
                 fontWeight: 600,
+                textAnchor: "middle",
               },
             }}
+          
           />
           <Tooltip content={<CustomTooltip />} />
           <Legend wrapperStyle={{ paddingTop: "12px" }} iconType="rect" />
